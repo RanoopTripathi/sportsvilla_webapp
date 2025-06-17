@@ -5,7 +5,11 @@
   "projects": {
     "sportsvilla_web": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -22,10 +26,17 @@
               {
                 "glob": "**/*",
                 "input": "public"
-              }
+              },
+              "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/assets/css/adminlte.css",
+              "src/assets/css/adminlte.min.css",
+              "src/styles.scss"
+            ],
+            "scripts": [
+              "src/assets/js/adminlte.js",
+              "src/assets/js/adminlte.min.js"
             ]
           },
           "configurations": {
@@ -82,7 +93,7 @@
               }
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ]
           }
         }
